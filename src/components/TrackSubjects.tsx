@@ -79,7 +79,11 @@ const TrackSubjects: React.FC = () => {
         const files: FileSystemFileHandle[] = [];
 
         try {
-            for await (const [name, entry] of handle.entries() as AsyncIterable<[string, FileSystemHandle]>) {
+            const directoryHandle = handle as FileSystemDirectoryHandle & {
+                entries(): AsyncIterableIterator<[string, FileSystemHandle]>;
+            };
+
+            for await (const [, entry] of directoryHandle.entries()) {
                 if (entry.kind === 'file' && entry.name.endsWith('.txt')) {
                     files.push(entry as FileSystemFileHandle);
                 }

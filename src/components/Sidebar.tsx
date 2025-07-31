@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Calendar, BookOpen, CheckSquare, Menu, X } from 'lucide-react';
 
 type ActiveSection = 'calendar' | 'subjects' | 'todo';

@@ -26,7 +26,13 @@ const TodoList: React.FC = () => {
     useEffect(() => {
         const stored = localStorage.getItem('sms_tasks');
         if (stored) {
-            const parsedTasks = JSON.parse(stored).map((task: any) => ({
+            const parsedTasks = JSON.parse(stored).map((task: {
+                id: string;
+                text: string;
+                completed: boolean;
+                createdAt: string;
+                // add other properties as needed
+            }) => ({
                 ...task,
                 createdAt: new Date(task.createdAt)
             }));
