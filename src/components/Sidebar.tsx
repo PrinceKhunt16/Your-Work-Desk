@@ -29,12 +29,12 @@ const Sidebar: React.FC<SidebarProps> = ({
             icon: Calendar,
             description: 'View yearly calendar',
         },
-        {
-            id: 'subjects' as ActiveSection,
-            label: 'Track Subjects',
-            icon: BookOpen,
-            description: 'Manage your subjects',
-        },
+        // {
+        //     id: 'subjects' as ActiveSection,
+        //     label: 'Track Subjects',
+        //     icon: BookOpen,
+        //     description: 'Manage your subjects',
+        // },
     ];
 
     return (
@@ -59,8 +59,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div className={`fixed left-0 top-0 h-full bg-white shadow-xl border-r border-slate-200 transition-transform z-50 w-80 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
                 }`}>
                 <div className="p-6">
-                    <h1 className="text-2xl font-bold text-slate-800 mb-2">Your Work Desk</h1>
-                    <p className="text-slate-600 text-sm mb-8">Organize your academic life</p>
+                    <h1 className="text-2xl font-bold mb-2"><span className='text-orange-500'>Your</span> <span className='text-blue-500'>Work</span> <span className='text-green-500'>Desk</span></h1>
+                    <p className="text-slate-600 text-sm mb-8">Organize the way you want</p>
 
                     <nav className="space-y-2">
                         {menuItems.map((item) => {

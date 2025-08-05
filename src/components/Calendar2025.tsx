@@ -38,8 +38,8 @@ const Calendar2025: React.FC = () => {
                 <div
                     key={day}
                     className={`h-10 w-10 flex items-center justify-center text-sm  cursor-pointer transition-colors ${isToday
-                            ? 'bg-blue-600 text-white font-semibold'
-                            : 'hover:bg-slate-100 text-slate-700'
+                            ? 'bg-cyan-500 text-white font-semibold'
+                            : 'hover:bg-slate-100 text-sky-500'
                         }`}
                 >
                     {day}
@@ -51,7 +51,7 @@ const Calendar2025: React.FC = () => {
             <div className="grid grid-cols-7 gap-1">
                 {/* Day headers */}
                 {daysOfWeek.map((day) => (
-                    <div key={day} className="h-8 flex items-center justify-center text-xs font-medium text-slate-600">
+                    <div key={day} className="h-8 flex items-center justify-center text-xs font-medium text-indigo-500">
                         {day}
                     </div>
                 ))}
@@ -62,17 +62,17 @@ const Calendar2025: React.FC = () => {
     };
 
     return (
-        <div className="max-w-6xl">
+        <div className="max-w-6xl mx-auto">
             <div className="mb-8">
-                <h1 className="text-3xl font-bold text-slate-800 mb-2">Calendar 2025</h1>
-                <p className="text-slate-600">Academic year calendar view</p>
+                <h1 className="text-yellow-500 text-3xl font-bold mb-2">Calendar 2025</h1>
+                <p className="text-violet-500">Academic year calendar view</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0">
                 {months.map((month, index) => (
                     <div key={month} className="bg-white border border-slate-200">
                         <div className="p-4 bg-slate-50 border-b border-slate-200">
-                            <h3 className="text-lg font-semibold text-slate-800">{month}</h3>
+                            <h3 className="text-lg font-semibold text-rose-500">{month}</h3>
                         </div>
 
                         <div className="p-4">

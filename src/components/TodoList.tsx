@@ -102,15 +102,15 @@ const TodoList: React.FC = () => {
     const completedCount = tasks.filter(task => task.completed).length;
 
     return (
-        <div>
+        <div className="max-w-6xl mx-auto">
             <div className="mb-8">
-                <h1 className="text-3xl font-bold text-slate-800 mb-2">Todos</h1>
-                <p className="text-slate-600">Manage your tasks and stay organized</p>
+                <h1 className="text-yellow-500 text-3xl font-bold mb-2">Todos</h1>
+                <p className="text-violet-600">Manage your tasks and stay organized</p>
             </div>
 
             {/* Add new task */}
-            <div className="bg-white  shadow-sm border border-slate-200 p-6 mb-6">
-                <h3 className="text-lg font-semibold text-slate-800 mb-4">Add New Task</h3>
+            <div className="bg-white shadow-sm border border-slate-200 p-6 mb-6">
+                <h3 className="text-lg font-semibold text-indigo-500 mb-4">Add New Task</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <input
                         type="text"
@@ -118,7 +118,7 @@ const TodoList: React.FC = () => {
                         value={newTask}
                         onChange={(e) => setNewTask(e.target.value)}
                         onKeyPress={(e) => e.key === 'Enter' && addTask()}
-                        className="flex-1 px-4 py-2 border border-slate-300  focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="text-rose-500 flex-1 px-4 py-2 border border-slate-300  focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     />
                     <Select
                         value={newPriority}
@@ -230,7 +230,7 @@ const TodoList: React.FC = () => {
                             <div className="flex items-center gap-4">
                                 <button
                                     onClick={() => toggleTask(task.id)}
-                                    className={`cursor-pointer flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${task.completed
+                                    className={`cursor-pointer flex-shrink-0 w-5 h-5 rounded-none border-2 flex items-center justify-center transition-all ${task.completed
                                         ? 'bg-green-600 border-green-600 text-white'
                                         : 'border-slate-300 hover:border-green-500'
                                         }`}
