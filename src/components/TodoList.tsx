@@ -166,11 +166,11 @@ const TodoList: React.FC = () => {
                     <div className="flex gap-6 text-sm">
                         <div className="flex items-center gap-2">
                             <Clock size={16} className="text-blue-600" />
-                            <span className="text-slate-600">Active: <span className="font-semibold text-slate-800">{activeCount}</span></span>
+                            <span className="text-slate-600">Active <span className="font-semibold text-slate-800">{activeCount}</span></span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Check size={16} className="text-green-600" />
-                            <span className="text-slate-600">Completed: <span className="font-semibold text-slate-800">{completedCount}</span></span>
+                            <span className="text-slate-600">Completed <span className="font-semibold text-slate-800">{completedCount}</span></span>
                         </div>
                     </div>
 
