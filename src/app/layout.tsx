@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Commissioner, Aleo, Lato } from "next/font/google";
+import { Commissioner, Lora, Lato } from "next/font/google";
 import "./globals.css";
 
 const commissionerSans = Commissioner({
@@ -7,10 +7,10 @@ const commissionerSans = Commissioner({
   subsets: ["latin"],
 });
 
-const aleoSans = Aleo({
-  variable: "--font-aleo",
+const loraSans = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const latoSans = Lato({
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aleoSans.variable} ${latoSans.variable} antialiased`}
+        className={`${loraSans.variable} ${latoSans.variable} antialiased`}
       >
         {children}
       </body>
